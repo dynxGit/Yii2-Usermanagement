@@ -1,5 +1,7 @@
 {
 	"name": "dynx/yii2-usermanagement",
 	"description": "User manager for Yii2 with extended RBAC",
+	"require":{
+	}
 
 }
