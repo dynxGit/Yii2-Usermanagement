@@ -6,7 +6,7 @@ Extended User Manager
 
 ### Frontend elements
 * **Registration**
-  * Simple registration form (email address only)
+  * Simple registration form (name and email address only)
   * Numerical Token confirmation via email (token is configurable default: 3 letter-4 number DYN-2234)
   * Initial password setup (see: Change/ edit password)
   * Initial profile setup (see: Profile)
