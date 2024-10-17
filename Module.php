@@ -66,6 +66,7 @@ class Module extends YiiModule implements BootstrapInterface
      * User account Tryout timeframe in day. 0 means no account limit 
      */
     public $tryout = 30; //days
+    public $config =[];
 
 
     /**

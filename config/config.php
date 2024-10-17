@@ -17,6 +17,23 @@ return [
         'htmlLayout' => '@dynx/mail/layouts/html',
         'textLayout' => '@dynx/mail/layouts/text',
     ],
-    'tryout'=>30
+    /**
+     * Format of pin (sections separated by "-")
+     * Section type : last Char in section (C:Character N:Number)
+     * section count: Number of the chars is the left part of the section 
+     * 
+     * if section count is not number the section is fix!  (XYZ-4N = XYZ-1234)
+     * default: "3C-4N" result 3 character and 4 number : ABC-1234
+     */
+    'pinFormat' => "3C-4N",
+
+    'tryout' => 30,
+    /**
+     * Extra config data available from module using "cfg" before arraykey
+     * for example extraParameter as attribute  Module->cfgextraParameter
+     */
+    'config' => [
+
+    ]
 
 ];
