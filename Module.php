@@ -29,44 +29,18 @@ use dynx\models\User;
  */
 class Module extends YiiModule implements BootstrapInterface
 {
-    public $SUAemail = null; //TODO Clear default value
-      /**
-     * @var array options for app mailer
-     * @link https://www.yiiframework.com/doc/api/2.0/yii-mail-basemailer
-     * If you want to override the mailer views, set viewPath.
+    /**
+     * Details of te setting is written in config/config.php 
      */
-    public $mailOptions = [
-        'viewPath' => '@dynx/mail',
-        'htmlLayout' => '@dynx/mail/layouts/html',
-        'textLayout' => '@dynx/mail/layouts/text',
-    ];
-
+    public $SUAemail = null; 
+    public $mailOptions = [];
     public $loginAttempt = 3;
     public $loginAttemptTimeout = 10;
-    /**
-     * How many seconds confirmation token will be invalid
-     */
     public $tokenExpired = 3600; // 1 hour
-
-    /**
-     * Format of pin (sections separated by "-")
-     * Section type : last Char in section (C:Character N:Number)
-     * section count: Number of the chars is the left part of the section 
-     * 
-     * if section count is not number the section is fix!  (XYZ-4N = XYZ-1234)
-     * default: "3C-4N" result 3 character and 4 number : ABC-1234
-     */
     public $pinFormat = "3C-4N";
-
-    /**
-     * LOGIN input type (email or username default:email)
-     */
     public $loginInput = "email";
-    /**
-     * User account Tryout timeframe in day. 0 means no account limit 
-     */
     public $tryout = 30; //days
-    public $config =[];
+    public $config = [];
 
 
     /**
@@ -74,20 +48,18 @@ class Module extends YiiModule implements BootstrapInterface
      */
     public function init()
     {
-        /*
-        if (! Yii::$app->has('authManager')) {
+           if (! Yii::$app->has('authManager')) {
             throw new InvalidConfigException('$app::authManager is not configured.');
         }
-    */
         parent::init();
         Yii::configure($this, require __DIR__ . '/config/config.php');
 
-        if (! isset(Yii::$app->i18n->translations['dynx/*'])) {
+        if (!isset(Yii::$app->i18n->translations['dynx/*'])) {
             Yii::$app->i18n->translations['dynx/*'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
                 'sourceLanguage' => 'en',
                 'basePath' => '@dynx/messages/',
-                'fileMap'        => [
+                'fileMap' => [
                     'dynx/ar' => 'models.php',
 
                 ],
@@ -102,7 +74,8 @@ class Module extends YiiModule implements BootstrapInterface
     {
         /* @var $user User */
         $user = $event->identity;
-        if ($user->status != User::STATUS_ACTIVE) $event->isValid = false;  // holds blocked user
+        if ($user->status != User::STATUS_ACTIVE)
+            $event->isValid = false;  // holds blocked user
         else {
             $user->touch('lastlogin_at');
             $user->updateCounters(['login_count' => 1]);
@@ -153,7 +126,8 @@ class Module extends YiiModule implements BootstrapInterface
         }
         if (!Yii::$app->user->isGuest)
             $lang = Yii::$app->user->identity->lang;
-        if ($lang) Yii::$app->language = $lang;
+        if ($lang)
+            Yii::$app->language = $lang;
     }
     /**
      * Check how much attempts user has been made in X seconds

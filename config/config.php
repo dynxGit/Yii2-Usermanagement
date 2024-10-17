@@ -26,7 +26,9 @@ return [
      * default: "3C-4N" result 3 character and 4 number : ABC-1234
      */
     'pinFormat' => "3C-4N",
-
+    /**
+     * User account Tryout timeframe in day. 0 means no account limit 
+     */
     'tryout' => 30,
     /**
      * Extra config data available from module using "cfg" before arraykey
