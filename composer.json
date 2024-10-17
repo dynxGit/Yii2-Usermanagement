@@ -1,5 +1,5 @@
 {
-	"name": "dynxgit/dynx",
+	"name": "dynxgit/Yii2-Usermanagement",
 	"description": "User manager for Yii2 with extended RBAC",
 	"type": "project",
 	"authors": [
@@ -16,7 +16,7 @@
         "yiisoft/yii2-symfonymailer": "~2.0.3"
 	},
     "autoload": {
-        "psr-4": { "dynxgit\\dynx\\*": "" }
+        "psr-4": { "dynxgit\\Yii2-Usermanagement\\*": "" }
     }
 
 }
