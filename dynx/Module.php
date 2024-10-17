@@ -1,15 +1,14 @@
 <?php
 
 /**
- * yii2-pluto
+ * YII2 usermanager 
  * ----------
  * User management module for Yii2 framework
  * Version 1.0.0
- * Copyright (c) 2019
- * Sjaak Priester, Amsterdam
+ * Copyright (c) 2024
+ * András Szincsák, Győr Hungary
  * MIT License
- * https://github.com/sjaakp/yii2-pluto
- * https://sjaakpriester.nl
+ * https://github.com/dynxGit/dinx
  */
 
 namespace dynx;
