@@ -1,9 +1,22 @@
 {
-	"name": "dynx/yii2-usermanagement",
+	"name": "dynxgit/dynx",
 	"description": "User manager for Yii2 with extended RBAC",
 	"type": "project",
-    	"minimum-stability": "stable",
+	"authors": [
+        {
+            "name": "András Szincsák",
+            "email": "git@dynx.hu"
+        }
+    ],
+
 	"require":{
-	}
+		"php": ">=7.0.0",
+        "yiisoft/yii2": "~2.0.14",
+		"yiisoft/yii2-bootstrap5": "~2.0.2",
+        "yiisoft/yii2-symfonymailer": "~2.0.3"
+	},
+    "autoload": {
+        "psr-4": { "dynxgit\\dynx\\*": "" }
+    }
 
 }
