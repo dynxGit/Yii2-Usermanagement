@@ -2,13 +2,14 @@
 	"name": "dynxgit/yii2-usermanager",
 	"description": "User manager for Yii2 with extended RBAC",
 	"type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
 	"authors": [
         {
             "name": "András Szincsák",
             "email": "git@dynx.hu"
         }
     ],
-    "stability":"stable",
 	"require":{
 		"php": ">=7.0.0",
         "yiisoft/yii2": "~2.0.14",
