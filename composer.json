@@ -2,7 +2,7 @@
 	"name": "dynxgit/yii2-usermanager",
 	"description": "User manager for Yii2 with extended RBAC",
 	"type": "project",
-    "license": "Apache License 2.0",
+    "license": "BSD-3-Clause",
     "minimum-stability": "stable",
 	"authors": [
         {
