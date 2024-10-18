@@ -8,6 +8,8 @@
  * András Szincsák, Győr Hungary
  * MIT License
  * https://github.com/dynxGit/Yii2-usermanager
+ * 
+ * Version Initial
  */
 
 
