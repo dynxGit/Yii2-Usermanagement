@@ -39,7 +39,9 @@ class M241010230634UserAddSua extends Migration
 
 	public function safeDown()
 	{
-		$user = User::findByEmail('sua@dynx.hu');
+		$mod=Module::getInstance();
+		$suaEmail=isset($mod->SUAemail)?$mod->SUAemail:'sua@dynx.hu';
+		$user = User::findByEmail($suaEmail);
 		if ($user) {
 			$user->delete();
 		}

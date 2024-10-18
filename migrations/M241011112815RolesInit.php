@@ -15,9 +15,9 @@ class M241011112815RolesInit extends Migration
     public function safeUp()
     {
         $roles = [
-            'SysAdmin' => "Sytem administrator",
-            'Sitedmin' => "Site administrator",
-            'Editor' => "Site editor",
+            '0_SYS_ADM' => "Sytem administrator",
+            '1_SITE_ADM' => "Site administrator",
+            '2_EDITOR' => "Site editor",
 
         ];
         $auth = \Yii::$app->authManager;
