@@ -1,6 +1,6 @@
 {
 	"name": "dynxgit/yii2-usermanager",
-	"description": "User manager for Yii2 with extended RBAC",
+	"description": "User manager for Yii2 with extended RBAC from dynxgit",
     "keywords": [],
 	"type": "project",
     "license": "BSD-3-Clause",
@@ -22,5 +22,4 @@
             "dynxgit\\yii2-usermanager\\": "master" 
         }
     }
-
 }
