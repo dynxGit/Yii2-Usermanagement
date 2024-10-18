@@ -19,7 +19,7 @@
 	},
     "autoload": {
         "psr-4": { 
-            "dynxgit\\yii2-usermanager\\": "*" 
+            "dynxgit\\yii2-usermanager\\": "master" 
         }
     }
 
