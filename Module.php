@@ -34,8 +34,8 @@ class Module extends YiiModule implements BootstrapInterface
      */
     public $SUAemail = null; 
     public $mailOptions = [];
-    public $loginAttempt = 3;
-    public $loginAttemptTimeout = 10;
+    public $attempt = 3;
+    public $attemptTimeout = 10;
     public $tokenExpired = 3600; // 1 hour
     public $pinFormat = "3C-4N";
     public $pinCss=[];
@@ -143,12 +143,12 @@ class Module extends YiiModule implements BootstrapInterface
             $attempts = Yii::$app->session->get("dy_attempt_count", 0);
 
             Yii::$app->session->set("dy_attempt_count", ++$attempts);
-            if (($lastAttempt + $this->loginAttemptTimeout) < time()) {
+            if (($lastAttempt + $this->attemptTimeout) < time()) {
                 Yii::$app->session->set("dy_attempt_last", time());
                 Yii::$app->session->set("dy_attempt_count", 1);
 
                 return true;
-            } elseif ($attempts > $this->loginAttempts) {
+            } elseif ($attempts > $this->attempts) {
                 return false;
             }
 
