@@ -38,6 +38,7 @@ class Module extends YiiModule implements BootstrapInterface
     public $loginAttemptTimeout = 10;
     public $tokenExpired = 3600; // 1 hour
     public $pinFormat = "3C-4N";
+    public $pinCss=[];
     public $loginInput = "email";
     public $tryout = 30; //days
     public $config = [];

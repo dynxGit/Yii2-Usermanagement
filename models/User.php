@@ -8,7 +8,7 @@
  * Copyright (c) 2024
  * András Szincsák, Győr Hungary
  * MIT License
- * https://github.com/dynxGit/dynx
+ * https://github.com/dynxGit/Yii2-Usermanager
  */
 
 namespace dynx\models;

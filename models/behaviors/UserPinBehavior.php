@@ -36,6 +36,9 @@ class UserPinBehavior extends Behavior
         }
         return $pin;
     }
+    /**
+     * Build HTML code to Show Pin in boxes (especially for e-mail)
+     */
 
     public function GetPinHtmlCode(){
         $mod = Module::getInstance();

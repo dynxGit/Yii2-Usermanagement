@@ -27,6 +27,20 @@ return [
      */
     'pinFormat' => "3C-4N",
     /**
+     * Css parameters for pin HTML code ( especially for e-mail )
+     * used in $user->pinHtmlCode
+     * DEFAULTS:
+     *     'color_white'=>"#fff",
+     *     'color_dark'=>"#1a8754",
+     *     'div'=>"text-align:center;margin:20px;height:50px;",
+     *     'box'=>"border-radius:5px;border:1px solid #ccc;width:50px;padding:10px 15px;font-weight:bold;font-size:24px;margin:0 5px;display:inline-block;",
+     */
+    'pinCss'=>[
+        'color_white'=>"#fff",
+        'color_dark'=>"#1a8754",  
+
+    ],
+    /**
      * User account Tryout timeframe in day. 0 means no account limit 
      */
     'tryout' => 30,
